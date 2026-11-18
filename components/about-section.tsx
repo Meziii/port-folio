@@ -1,20 +1,21 @@
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-28 bg-background border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12 text-center">À propos</h2>
+        <div className="max-w-4xl mx-auto" data-reveal>
+          <p className="eyebrow mb-4">01 — à propos</p>
+          <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-12">À propos</h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Étudiant en Master 2 MIASHS – Web Analyste, je suis passionné par la Data Science, l'Analyse de données
-                et le Développement Backend.
+                Diplômé d'un Master 2 MIASHS – Web Analyste, je me positionne comme Business Analyst : je relie les
+                besoins métier à la donnée, de l'analyse jusqu'à la décision.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mon parcours académique comprend une Licence en Ingénierie Logicielle, un Master en Systèmes
-                d'Information & IA, et actuellement un Master 2 MIASHS Web Analyste.
+                Mon parcours comprend une Licence en Ingénierie Logicielle, un Master en Systèmes d'Information & IA,
+                et un Master 2 MIASHS – Web Analyste.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -30,7 +31,7 @@ export function AboutSection() {
               <div className="space-y-4">
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="font-semibold text-navy">Master 2 MIASHS – Web Analyste</h4>
-                  <p className="text-muted-foreground">En cours</p>
+                  <p className="text-muted-foreground">Diplômé</p>
                 </div>
                 <div className="border-l-4 border-silver pl-4">
                   <h4 className="font-semibold text-navy">Master Systèmes d'Information & IA</h4>

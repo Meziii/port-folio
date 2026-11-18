@@ -6,19 +6,18 @@ const certifications = [
     title: "NDG Linux Essentials",
     issuer: "Cisco",
     icon: Award,
-    color: "text-blue-600",
+    color: "text-primary",
   },
   {
     title: "DevOps on AWS Specialization",
     issuer: "Coursera",
     icon: Award,
-    color: "text-orange-600",
+    color: "text-primary",
   },
 ]
 
 const languages = [
-  { language: "Français", level: "DALF C1", flag: "🇫🇷" },
-  { language: "Anglais", level: "Intermédiaire", flag: "🇬🇧" },
+  { language: "Anglais", level: "TOEIC 800", flag: "🇬🇧" },
 ]
 
 const softSkills = [
@@ -29,16 +28,20 @@ const softSkills = [
 
 export function CertificationsSection() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-28 bg-background border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-reveal>
+          <p className="eyebrow mb-4">— en bref</p>
+          <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-12">
+            Certifications & langues
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Certifications */}
             <div>
-              <h2 className="text-3xl font-bold text-navy mb-8">Certifications</h2>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-6">Certifications</h3>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <Card key={index} className="hover-lift border-0 shadow-md">
+                  <Card key={index} className="hover-lift bg-card border border-border">
                     <CardContent className="p-4">
                       <div className="flex items-center">
                         <cert.icon className={`h-6 w-6 ${cert.color} mr-3`} />
@@ -55,10 +58,10 @@ export function CertificationsSection() {
 
             {/* Languages */}
             <div>
-              <h2 className="text-3xl font-bold text-navy mb-8">Langues</h2>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-6">Langues</h3>
               <div className="space-y-4">
                 {languages.map((lang, index) => (
-                  <Card key={index} className="hover-lift border-0 shadow-md">
+                  <Card key={index} className="hover-lift bg-card border border-border">
                     <CardContent className="p-4">
                       <div className="flex items-center">
                         <span className="text-2xl mr-3">{lang.flag}</span>
@@ -75,10 +78,10 @@ export function CertificationsSection() {
 
             {/* Soft Skills */}
             <div>
-              <h2 className="text-3xl font-bold text-navy mb-8">Soft Skills</h2>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-6">Soft Skills</h3>
               <div className="space-y-4">
                 {softSkills.map((skill, index) => (
-                  <Card key={index} className="hover-lift border-0 shadow-md">
+                  <Card key={index} className="hover-lift bg-card border border-border">
                     <CardContent className="p-4">
                       <div className="flex items-center">
                         <skill.icon className="h-6 w-6 text-primary mr-3" />
